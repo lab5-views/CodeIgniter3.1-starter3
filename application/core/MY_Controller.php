@@ -34,7 +34,7 @@ class Application extends CI_Controller
     {
         if(!isset($this->data['navbar']))
             $this->data['navbar'] = $this->parser->parse('navbar', $this->data, true);
-            
+
         // use layout content if provided
         if (!isset($this->data['content']))
             $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
