@@ -119,6 +119,32 @@ LOCK TABLES `Orders` WRITE;
 /*!40000 ALTER TABLE `Orders` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Orders` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+DROP TABLE IF EXISTS `ci_sessions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `data` blob NOT NULL,
+  KEY `ci_sessions_timestamp` (`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+LOCK TABLES `ci_sessions` WRITE;
+/*!40000 ALTER TABLE `ci_sessions` DISABLE KEYS */;
+INSERT INTO `ci_sessions` VALUES ('a8739f101ceaba9ab1a3cd36e183215d1e4471b2','192.168.33.1',1478215234,'__ci_last_regenerate|i:1478215234;'),('37ae643bf892fad5a09e183ec14fea335009d82d','192.168.33.1',1478215785,'__ci_last_regenerate|i:1478215785;userrole|s:4:\"user\";'),('98fbc35b880281d62e82e5be2acf124be48591ed','192.168.33.1',1478216824,'__ci_last_regenerate|i:1478216824;'),('05e0d6ecac7d07f3909d72f189d5915e199ec25f','192.168.33.1',1478216094,'__ci_last_regenerate|i:1478216094;userrole|s:4:\"user\";'),('16206df00316bd479f2aeecdfa66335e6e528886','192.168.33.1',1478216535,'__ci_last_regenerate|i:1478216535;userrole|s:4:\"user\";'),('b6e70e4e6032d7c4a43428be1a3d324c91736f50','192.168.33.1',1478216792,'__ci_last_regenerate|i:1478216535;userrole|s:5:\"admin\";'),('d7ac8d3340389fcdb46b64f5658f0fab7a5f8ac5','192.168.33.1',1478217392,'__ci_last_regenerate|i:1478217392;'),('f1a2edbee141a23e90524669bf19d8965e10642c','192.168.33.1',1478217518,'__ci_last_regenerate|i:1478217392;');
+/*!40000 ALTER TABLE `ci_sessions` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -129,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-21  0:57:27
+-- Dump completed on 2016-11-04  0:02:31
