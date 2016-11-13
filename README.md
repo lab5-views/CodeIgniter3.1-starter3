@@ -13,4 +13,6 @@ Lab 6
 - Nov 3, 5:05PM: Completed Job 1 - implemented caboose package and setup project for job 2 to use CRUD
 
 Lab 7
-- Completely Part A - display item table for admins, used Caboose makeTextField() to create a formfield
+- Completed Part A - display item table for admins, used Caboose makeTextField() to create a formfield
+- Completed Part B - updated Maintence controller to be able to add, update, delete, and added more functionality to it overall. Added some views to complement these changes.
+

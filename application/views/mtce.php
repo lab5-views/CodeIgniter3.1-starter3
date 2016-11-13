@@ -13,3 +13,5 @@
     </tr>
     {/items}
 </table>
+
+<a class="btn btn-default" role="button" href="/Maintenance/add">Add a new menu item</a>
